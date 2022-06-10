@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import Link from "./Link";
+import { Grid } from "@mui/material"
+import Links from "./Link";
 
 const NavBar = () => {
   const [links] = useState(["Home", "About", "Projects", "Skills", "Contact"]);
 
   return (
-    <div>
+    <Grid container>
       {links.map((el) => (
-        <Link linkName={el} key={el} />
+        <Links linkName={el} key={el} />
       ))}
-    </div>
+    </Grid>
   );
 };
 

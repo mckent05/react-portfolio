@@ -1,10 +1,11 @@
 import React from 'react'
+import { Box, Typography } from "@material-ui/core"
 
 const Greeting = ({text}) => {
   return (
-    <div>
-        <p>{text}</p>
-    </div>
+    <Box>
+        <Typography>{text}</Typography>
+    </Box>
   )
 }
 
