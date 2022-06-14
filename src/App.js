@@ -1,15 +1,19 @@
 import React from "react";
 import { useTheme, useMediaQuery } from "@mui/material";
-import NavBar from "./Components/NavBar/NavBar";
-import DrawerComponent from "./Components/NavBar/MobileNav/DrawerComponent";
+import { makeStyles } from '@mui/styles'
 import Portfolio from "./Components/Portfolio";
 
+const useStyles = makeStyles(() => ({
+  root: {
+    position: "relative",
+    Width: '100vw',
+  }
+
+}))
+
 function App() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div className="App">
-      {isMobile ? <DrawerComponent /> : <NavBar />}
       <Portfolio />
     </div>
   );

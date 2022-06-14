@@ -2,9 +2,9 @@ import { ListItem, ListItemText } from "@mui/material"
 import React from 'react'
 import Links from "../Link"
 
-const MobileLink = ({linkName}) => {
+const MobileLink = ({linkName, control}) => {
   return (
-    <ListItem>
+    <ListItem onClick={() => control()}>
         <ListItemText>
             <Links linkName={linkName} />
         </ListItemText>
