@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
 
 const NavBar = () => {
   const classes = useStyles();
-  const [links] = useState(["Home", "About", "Projects", "Skills", "Contact"]);
+  const [links] = useState(["Home", "Services", "Projects", "Skills", "Contact"]);
 
   return (
     <Grid container className={classes.root}>

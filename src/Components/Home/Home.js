@@ -21,7 +21,7 @@ const useStyles = makeStyles(() => ({
 
 }))
 
-const Home = () => {
+const Home = ({name, jobTitle}) => {
   const classes = useStyles()
 
   return (
@@ -32,7 +32,7 @@ const Home = () => {
           <TechImage img={img3} />
           <TechImage img={img4} />
         </Box>
-        <Greeting text='Hi! I am Tope.' jobTitle="Full-stack Engineer" />
+        <Greeting text={`Hi! I am ${name}`} jobTitle={jobTitle} />
     </Grid>
   )
 }

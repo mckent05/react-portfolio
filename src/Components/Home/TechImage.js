@@ -7,6 +7,7 @@ const useStyles = makeStyles(() => ({
     width: 80,
     height: 80,
     backgroundColor: '#fff',
+    boxShadow: '0 2px 10px grey',
     borderRadius: '100%',
     "&:nth-of-type(1)" : {
       position: 'absolute',
