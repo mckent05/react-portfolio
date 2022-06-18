@@ -26,7 +26,7 @@ const Links = ({ linkName, index }) => {
       <Link
         activeClass="active"
         className={classes.link}
-        smooth='true'
+        smooth
         spy='true'
         to='services'
       >
