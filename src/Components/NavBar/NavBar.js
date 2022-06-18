@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import Links from "./Link";
+import Links from "./Links";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "transparent",
+    backgroundColor: "blue",
   },
   logo: {
     width: "20%",
@@ -28,7 +28,7 @@ const useStyles = makeStyles(() => ({
 
 const NavBar = () => {
   const classes = useStyles();
-  const [links] = useState(["Home", "Services", "Projects", "Skills", "Contact"]);
+  const [links] = useState(["Home", "services", "Projects", "Skills", "Contact"]);
 
   return (
     <Grid container className={classes.root}>
@@ -36,10 +36,11 @@ const NavBar = () => {
         <p>My logo</p>
       </Box>
       <Box className={classes.links}>
-        {links.map((el) => (
+        {links.map((el,i) => (
           <Links
             linkName={el}
             key={el}
+            index={i}
           />
         ))}
       </Box>

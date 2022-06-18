@@ -1,5 +1,5 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
@@ -7,6 +7,7 @@ const useStyles = makeStyles(() => ({
     color: "#fff",
     fontSize: 23,
     textDecoration: "none",
+    paddingBottom: 8,
     transition: "all 0.5s",
     "&:hover": {
       color: "#0b0b45",
@@ -17,21 +18,23 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Link = ({ linkName }) => {
+const Links = ({ linkName, index }) => {
   const classes = useStyles();
+
   return (
     <div>
-      <NavLink
-        exact
-        activeClassName={classes.underline}
+      <Link
+        activeClass="active"
         className={classes.link}
-        to={`#${linkName}`}
+        smooth='true'
+        spy='true'
+        to='services'
       >
         {" "}
         {linkName}
-      </NavLink>
+      </Link>
     </div>
   );
 };
 
-export default Link;
+export default Links;

@@ -57,18 +57,18 @@ const Portfolio = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Grid container className={classes.root}>
+        {isMobile ? <DrawerComponent /> : <NavBar />}
         <Box className={classes.cont} >
-          {isMobile ? <DrawerComponent /> : <NavBar />}
           <Home name={name} jobTitle={job}/>
         </Box>
-        <div className={classes.services} id='Services'>
+        <section className={classes.services} id="services">
           <div className={classes.servicesHeader}>
             <Underline/>
             <Typography>What <span className={classes.text}>I Do</span></Typography>
             <Underline />
           </div>
           <About about={skills} />
-        </div>
+        </section>
         
 
     </Grid>
