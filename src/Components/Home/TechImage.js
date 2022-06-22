@@ -39,7 +39,7 @@ const useStyles = makeStyles(() => ({
   },
 }))
 
-const TechImage = ({img}) => {
+const TechImage = ({ img }) => {
   const classes = useStyles()
   return (
     <Box className ={classes.imageCont}>
