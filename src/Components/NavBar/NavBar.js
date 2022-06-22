@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Grid, Box } from "@mui/material";
+import { Link } from 'react-router-dom';
+import { Grid, Box, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Links from "./Links";
 
@@ -8,22 +9,39 @@ const useStyles = makeStyles(() => ({
     Width: "100%",
     height: "10vh",
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-evenly",
     alignItems: "center",
-    backgroundColor: "blue",
+    backgroundColor: "#b2beb5",
   },
   logo: {
-    width: "20%",
     display: "flex",
     justifyContent: "flex-start",
   },
 
+  btnCont: {
+    "& .MuiButton-root": {
+      backgroundColor: '#fff',
+      color: '#0b0b45',
+      border: "1px solid #0b0b45",
+      transition: "ease-in 0.5s",
+      "&:hover": {
+        backgroundColor: "#0b0b45",
+        color: "#fff",
+      }
+    }
+  },
+
   links: {
-    width: "70%",
+    width: '55%',
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
   },
+
+  linkedIn: {
+    textDecoration: 'none',
+    textTransform: 'capitalize',
+  }
 }));
 
 const NavBar = () => {
@@ -43,6 +61,17 @@ const NavBar = () => {
             index={i}
           />
         ))}
+      </Box>
+      <Box className={classes.btnCont}>
+        <Link className={classes.linkedIn} to='https://www.linkedin.com/in/akinladetemitope' target="_blank">
+          <Button
+            type="button"
+            className={classes.FilterBtn}
+            size="medium"
+          >
+            LinkedIn
+          </Button>
+        </Link>
       </Box>
     </Grid>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
@@ -12,9 +12,9 @@ const useStyles = makeStyles(() => ({
     "&:hover": {
       color: "#0b0b45",
     },
-  },
-  underline: {
-    borderBottom: "2px solid red",
+    "&.active": {
+      borderBottom: "2px solid #0b0b45",
+    }
   },
 }));
 
@@ -23,16 +23,14 @@ const Links = ({ linkName, index }) => {
 
   return (
     <div>
-      <Link
+      <NavLink
         activeClass="active"
         className={classes.link}
-        smooth
-        spy='true'
-        to='services'
+        to={`${linkName}`}
       >
         {" "}
         {linkName}
-      </Link>
+      </NavLink>
     </div>
   );
 };

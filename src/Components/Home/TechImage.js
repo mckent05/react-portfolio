@@ -11,23 +11,23 @@ const useStyles = makeStyles(() => ({
     borderRadius: '100%',
     "&:nth-of-type(1)" : {
       position: 'absolute',
-      top: '20%',
-      left: '20%'
+      top: '15%',
+      left: '15%'
     },
     "&:nth-of-type(2)": {
       position: 'absolute',
-      top: '30%',
-      right: "5%"
+      top: '15%',
+      right: "15%"
     },
     "&:nth-of-type(3)": {
       position: 'absolute',
-      top: '60%',
+      top: '80%',
       left: '10%'
     },
     "&:nth-of-type(4)": {
       position: 'absolute',
-      top: '70%',
-      right: '7%'
+      top: '80%',
+      right: '10%'
     }
   },
   img: {
