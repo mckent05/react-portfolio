@@ -1,6 +1,6 @@
 export const myData = {
   name: "Akinlade Temitope",
-  job: "Full-stack Engineer",
+  job: "Full-Stack Engineer",
   projects: [],
   skills: [
     {
